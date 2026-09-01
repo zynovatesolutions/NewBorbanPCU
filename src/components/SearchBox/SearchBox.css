@@ -1,0 +1,71 @@
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.input {
+  border-style: none;
+  /* height: 50px; */
+  width: 10px;
+  padding: 6px 0px;
+  outline: none;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px #f3f3f3;
+  padding-right: 40px;
+  color: #fff;
+  outline: none;
+}
+
+.input::placeholder,
+.input {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 17px;
+}
+
+.input::placeholder {
+  color: #8f8f8f;
+  font-weight: 300;
+  font-family: Quicksand;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border-style: none;
+  border-radius: 50%;
+  pointer-events: painted;
+  background-color: white;
+  transition: 0.2s linear;
+  color: #465462;
+}
+.icon-item {
+  font-size: 1.2rem !important;
+}
+
+/* Updated selector to select both .icon and .input when focused */
+.icon:focus ~ .input,
+.input:focus {
+  box-shadow: none;
+  width: 250px;
+  border-radius: 0px;
+  background-color: transparent;
+  /* border: px solid #465462; */
+  border-radius: 30px;
+  color: #465462;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  padding: 6px 12px;
+
+}

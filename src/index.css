@@ -1,0 +1,51 @@
+@import "./styles/design-tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Plus Jakarta Sans", Inter, sans-serif;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow: hidden;
+    background: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto w-full max-w-content px-4 pb-8 pt-2 lg:px-6;
+  }
+
+  /* Full-bleed POS screens (counter sale) — fill main, no page padding */
+  .page-shell-pos {
+    @apply flex h-full min-h-0 w-full max-w-none flex-1 flex-col overflow-hidden p-0;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.25s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

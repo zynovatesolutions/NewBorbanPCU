@@ -1,0 +1,22 @@
+@media screen and (max-height: 750px) {
+  .avatar {
+    height: 10vh;
+  }
+  .main-wrapper {
+    width: 430px !important;
+    height: 100vh !important;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .menu-list {
+    height: 84.5vh !important;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .bottomTab {
+    position: relative; /* Change position to relative */
+    bottom: 0; /* Reset bottom positioning */
+    left: 0; /* Reset bottom positioning */
+    margin-top: 0px; /* Add margin to separate from the main content */
+  }
+}
